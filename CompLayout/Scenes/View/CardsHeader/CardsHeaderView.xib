@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U6b-Vx-4bR" customClass="CardsHeaderView" customModule="CompLayout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aO-gZ-Sqo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="syJ-js-2nk">
+                            <rect key="frame" x="8" y="8" width="304" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU6-Fa-Goj">
+                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-tW-iiD">
+                                    <rect key="frame" x="99.5" y="0.0" width="152.5" height="20"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx8-ay-MVv">
+                                    <rect key="frame" x="256" y="0.0" width="48" height="20"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="syJ-js-2nk" secondAttribute="bottom" constant="8" id="EzM-dj-lwE"/>
+                        <constraint firstAttribute="trailing" secondItem="syJ-js-2nk" secondAttribute="trailing" constant="8" id="FlZ-uN-rmU"/>
+                        <constraint firstItem="syJ-js-2nk" firstAttribute="top" secondItem="2aO-gZ-Sqo" secondAttribute="top" constant="8" id="Nb8-Ok-kZF"/>
+                        <constraint firstItem="syJ-js-2nk" firstAttribute="leading" secondItem="2aO-gZ-Sqo" secondAttribute="leading" constant="8" id="iFx-7B-Oqq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="2aO-gZ-Sqo" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="KqY-00-uYd"/>
+                <constraint firstAttribute="bottom" secondItem="2aO-gZ-Sqo" secondAttribute="bottom" id="Ph0-Rs-gHk"/>
+                <constraint firstItem="2aO-gZ-Sqo" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Yho-Wu-ufj"/>
+                <constraint firstAttribute="trailing" secondItem="2aO-gZ-Sqo" secondAttribute="trailing" id="ZYy-xz-aLE"/>
+            </constraints>
+            <connections>
+                <outlet property="containerView" destination="2aO-gZ-Sqo" id="XkZ-dg-IGg"/>
+                <outlet property="detailLabel" destination="hx8-ay-MVv" id="BjJ-6K-4Hs"/>
+                <outlet property="titleLabel" destination="uU6-Fa-Goj" id="ZTu-ux-Udj"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="117.1875"/>
+        </collectionReusableView>
+    </objects>
+</document>
