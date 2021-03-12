@@ -5,18 +5,21 @@
 //  Created by Alex Stratu on 30.11.2020.
 //
 
-import Foundation
 import Combine
+import CombineExtensions
+import Foundation
 
-struct CardsViewModel {
-    let sections: Future<[Section], Error>
+class CardsViewModel {
+    @Published var sections: [CardSection] = []
+    var subscriptions = Set<AnyCancellable>()
     
     init() {
-        sections = Future<[Section], Error> { promise in
-            let sections = Bundle.main.decode([Section].self, from: "cards.json")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                promise(.success(sections))
-            }
-        }
+        let sections = Bundle.main.decode(
+            [CardSection].self, from: "cards.json")
+        
+        Just(sections)
+            .delay(for: 2, scheduler: RunLoop.main)
+            .weakAssign(to: \.sections, on: self)
+            .store(in: &subscriptions)
     }
 }

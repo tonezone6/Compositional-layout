@@ -8,6 +8,7 @@
 import UIKit
 
 final class CardsHeaderView: UICollectionReusableView {
+    static let reuseID = "CardsHeaderView"
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,10 +18,5 @@ final class CardsHeaderView: UICollectionReusableView {
         super.awakeFromNib()
         containerView.layer.cornerRadius = 8
         containerView.alpha = 0.5
-    }
-    
-    func configure(with viewModel: CardsHeaderViewModel) {
-        titleLabel.text = viewModel.title
-        detailLabel.text = viewModel.detail
     }
 }

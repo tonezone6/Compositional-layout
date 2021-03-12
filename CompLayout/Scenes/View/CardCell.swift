@@ -8,6 +8,7 @@
 import UIKit
 
 final class CardCell: UICollectionViewCell {
+    static let reuseID = "CardCell"
 
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var bubbleView: BubbleView!

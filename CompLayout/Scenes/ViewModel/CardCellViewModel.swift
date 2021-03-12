@@ -8,13 +8,14 @@
 import Foundation
 
 struct CardCellViewModel {
-    let bubbleColor: String
+    
     let title: String
     let subtitle: String
     let date: String
     let compact: Bool
+    let bubbleColor: String
     
-    init(card: Card, sectionType: Section.`Type`) {
+    init(card: Card, sectionType: SectionType) {
         switch sectionType {
         case .carousel: bubbleColor = "#FE5A2A"
         case .list:     bubbleColor = "#FE9E2A"
