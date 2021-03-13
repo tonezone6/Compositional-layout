@@ -6,19 +6,26 @@
 //
 
 import Combine
-import CombineExtensions
 import Foundation
 
 class CardsViewModel {
     @Published var sections: [CardSection] = []
-    var subscriptions = Set<AnyCancellable>()
+    var subscriptions: [AnyCancellable] = []
     
     init() {
-        let sections = Bundle.main.decode(
-            [CardSection].self, from: "cards.json")
+        let sections = Bundle.main
+            .decode([CardSection].self, from: "cards.json")
+            .publisher
         
-        Just(sections)
-            .delay(for: 2, scheduler: RunLoop.main)
+        let timer = Timer
+            .publish(every: 1.5, on: .main, in: .common)
+            .autoconnect()
+        
+        sections.zip(timer)
+            .map(\.0)
+            .scan([]) { (collect, section) in
+                collect + [section]
+            }
             .weakAssign(to: \.sections, on: self)
             .store(in: &subscriptions)
     }

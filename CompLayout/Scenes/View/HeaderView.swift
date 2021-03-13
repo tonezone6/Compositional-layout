@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class CardsHeaderView: UICollectionReusableView {
-    static let reuseID = "CardsHeaderView"
+final class HeaderView: UICollectionReusableView {
+    static let reuseID = "HeaderView"
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!

@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		FA01CB2F257528A200D31733 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01CB2E257528A200D31733 /* BubbleView.swift */; };
-		FA32DF8825766B68007C4C96 /* CardsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA32DF8625766B68007C4C96 /* CardsHeaderView.swift */; };
-		FA32DF8925766B68007C4C96 /* CardsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA32DF8725766B68007C4C96 /* CardsHeaderView.xib */; };
-		FA32DF9425768094007C4C96 /* CollectionView-Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA32DF9325768094007C4C96 /* CollectionView-Cards.swift */; };
+		FA32DF8825766B68007C4C96 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA32DF8625766B68007C4C96 /* HeaderView.swift */; };
+		FA32DF8925766B68007C4C96 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA32DF8725766B68007C4C96 /* HeaderView.xib */; };
+		FA32DF9425768094007C4C96 /* CardsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA32DF9325768094007C4C96 /* CardsCollectionView.swift */; };
 		FA3A19F3257799E200DD5D53 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = FA3A19F2257799E200DD5D53 /* cards.json */; };
 		FA3A19F925779E8700DD5D53 /* Bundle-Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A19F825779E8700DD5D53 /* Bundle-Decode.swift */; };
 		FA42595725FBB7850004D1BE /* CombineExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = FA42595625FBB7850004D1BE /* CombineExtensions */; };
+		FAA92B8025FD07DD0098C0BB /* LayoutSection-Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA92B7F25FD07DD0098C0BB /* LayoutSection-Carousel.swift */; };
+		FAA92B8325FD07FE0098C0BB /* LayoutSection-Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA92B8225FD07FE0098C0BB /* LayoutSection-Grid.swift */; };
+		FAA92B8625FD081C0098C0BB /* LayoutSection-List.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA92B8525FD081C0098C0BB /* LayoutSection-List.swift */; };
+		FAA92B8B25FD08BA0098C0BB /* LayoutSection-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA92B8A25FD08BA0098C0BB /* LayoutSection-Constants.swift */; };
+		FAA92B9125FD09010098C0BB /* Layout-List.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA92B9025FD09010098C0BB /* Layout-List.swift */; };
 		FAD4C744251BCBA4003DE897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4C743251BCBA4003DE897 /* AppDelegate.swift */; };
 		FAD4C746251BCBA4003DE897 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4C745251BCBA4003DE897 /* SceneDelegate.swift */; };
 		FAD4C748251BCBA4003DE897 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4C747251BCBA4003DE897 /* CardsViewController.swift */; };
@@ -21,21 +26,26 @@
 		FAD4C750251BCBA5003DE897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD4C74E251BCBA5003DE897 /* LaunchScreen.storyboard */; };
 		FAD4C75D251BD160003DE897 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4C75C251BD160003DE897 /* Card.swift */; };
 		FAD4C768251C7FAF003DE897 /* CardSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4C767251C7FAF003DE897 /* CardSection.swift */; };
-		FAE486712574FE4000C0B16E /* LayoutSection-Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE486702574FE4000C0B16E /* LayoutSection-Grid.swift */; };
+		FAE486712574FE4000C0B16E /* LayoutSupplementaryItem-Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE486702574FE4000C0B16E /* LayoutSupplementaryItem-Header.swift */; };
 		FAFBFCE6257501C9005FECD0 /* CardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBFCE5257501C9005FECD0 /* CardCellViewModel.swift */; };
 		FAFBFCE9257501D1005FECD0 /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBFCE8257501D1005FECD0 /* CardsViewModel.swift */; };
-		FAFBFCEF25750454005FECD0 /* Color-Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBFCEE25750454005FECD0 /* Color-Hex.swift */; };
+		FAFBFCEF25750454005FECD0 /* UIColor-Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBFCEE25750454005FECD0 /* UIColor-Hex.swift */; };
 		FAFBFCF425750C62005FECD0 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBFCF225750C62005FECD0 /* CardCell.swift */; };
 		FAFBFCF525750C62005FECD0 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFBFCF325750C62005FECD0 /* CardCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA01CB2E257528A200D31733 /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
-		FA32DF8625766B68007C4C96 /* CardsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsHeaderView.swift; sourceTree = "<group>"; };
-		FA32DF8725766B68007C4C96 /* CardsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsHeaderView.xib; sourceTree = "<group>"; };
-		FA32DF9325768094007C4C96 /* CollectionView-Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView-Cards.swift"; sourceTree = "<group>"; };
+		FA32DF8625766B68007C4C96 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FA32DF8725766B68007C4C96 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		FA32DF9325768094007C4C96 /* CardsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionView.swift; sourceTree = "<group>"; };
 		FA3A19F2257799E200DD5D53 /* cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		FA3A19F825779E8700DD5D53 /* Bundle-Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decode.swift"; sourceTree = "<group>"; };
+		FAA92B7F25FD07DD0098C0BB /* LayoutSection-Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutSection-Carousel.swift"; sourceTree = "<group>"; };
+		FAA92B8225FD07FE0098C0BB /* LayoutSection-Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutSection-Grid.swift"; sourceTree = "<group>"; };
+		FAA92B8525FD081C0098C0BB /* LayoutSection-List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutSection-List.swift"; sourceTree = "<group>"; };
+		FAA92B8A25FD08BA0098C0BB /* LayoutSection-Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutSection-Constants.swift"; sourceTree = "<group>"; };
+		FAA92B9025FD09010098C0BB /* Layout-List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layout-List.swift"; sourceTree = "<group>"; };
 		FAD4C740251BCBA4003DE897 /* CompositionalLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD4C743251BCBA4003DE897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD4C745251BCBA4003DE897 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,10 +55,10 @@
 		FAD4C751251BCBA5003DE897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD4C75C251BD160003DE897 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FAD4C767251C7FAF003DE897 /* CardSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSection.swift; sourceTree = "<group>"; };
-		FAE486702574FE4000C0B16E /* LayoutSection-Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutSection-Grid.swift"; sourceTree = "<group>"; };
+		FAE486702574FE4000C0B16E /* LayoutSupplementaryItem-Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutSupplementaryItem-Header.swift"; sourceTree = "<group>"; };
 		FAFBFCE5257501C9005FECD0 /* CardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellViewModel.swift; sourceTree = "<group>"; };
 		FAFBFCE8257501D1005FECD0 /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
-		FAFBFCEE25750454005FECD0 /* Color-Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Hex.swift"; sourceTree = "<group>"; };
+		FAFBFCEE25750454005FECD0 /* UIColor-Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Hex.swift"; sourceTree = "<group>"; };
 		FAFBFCF225750C62005FECD0 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		FAFBFCF325750C62005FECD0 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +75,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAA92B8E25FD08E00098C0BB /* Compositional layout */ = {
+			isa = PBXGroup;
+			children = (
+				FAA92B7F25FD07DD0098C0BB /* LayoutSection-Carousel.swift */,
+				FAA92B8225FD07FE0098C0BB /* LayoutSection-Grid.swift */,
+				FAA92B8525FD081C0098C0BB /* LayoutSection-List.swift */,
+				FAA92B8A25FD08BA0098C0BB /* LayoutSection-Constants.swift */,
+				FAE486702574FE4000C0B16E /* LayoutSupplementaryItem-Header.swift */,
+				FAA92B9025FD09010098C0BB /* Layout-List.swift */,
+			);
+			path = "Compositional layout";
+			sourceTree = "<group>";
+		};
 		FAD4C737251BCBA4003DE897 = {
 			isa = PBXGroup;
 			children = (
@@ -104,11 +127,12 @@
 		FAD4C76E251C7FD3003DE897 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FA32DF8625766B68007C4C96 /* CardsHeaderView.swift */,
-				FA32DF8725766B68007C4C96 /* CardsHeaderView.xib */,
 				FA01CB2E257528A200D31733 /* BubbleView.swift */,
+				FA32DF8625766B68007C4C96 /* HeaderView.swift */,
+				FA32DF8725766B68007C4C96 /* HeaderView.xib */,
 				FAFBFCF225750C62005FECD0 /* CardCell.swift */,
 				FAFBFCF325750C62005FECD0 /* CardCell.xib */,
+				FA32DF9325768094007C4C96 /* CardsCollectionView.swift */,
 				FAD4C747251BCBA4003DE897 /* CardsViewController.swift */,
 			);
 			path = View;
@@ -117,10 +141,9 @@
 		FAE486742574FE6000C0B16E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FA32DF9325768094007C4C96 /* CollectionView-Cards.swift */,
+				FAA92B8E25FD08E00098C0BB /* Compositional layout */,
 				FA3A19F825779E8700DD5D53 /* Bundle-Decode.swift */,
-				FAFBFCEE25750454005FECD0 /* Color-Hex.swift */,
-				FAE486702574FE4000C0B16E /* LayoutSection-Grid.swift */,
+				FAFBFCEE25750454005FECD0 /* UIColor-Hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,7 +246,7 @@
 				FAFBFCF525750C62005FECD0 /* CardCell.xib in Resources */,
 				FA3A19F3257799E200DD5D53 /* cards.json in Resources */,
 				FAD4C74D251BCBA5003DE897 /* Assets.xcassets in Resources */,
-				FA32DF8925766B68007C4C96 /* CardsHeaderView.xib in Resources */,
+				FA32DF8925766B68007C4C96 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,16 +257,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA92B8025FD07DD0098C0BB /* LayoutSection-Carousel.swift in Sources */,
 				FAD4C748251BCBA4003DE897 /* CardsViewController.swift in Sources */,
-				FAE486712574FE4000C0B16E /* LayoutSection-Grid.swift in Sources */,
+				FAE486712574FE4000C0B16E /* LayoutSupplementaryItem-Header.swift in Sources */,
 				FAFBFCE9257501D1005FECD0 /* CardsViewModel.swift in Sources */,
-				FAFBFCEF25750454005FECD0 /* Color-Hex.swift in Sources */,
+				FAFBFCEF25750454005FECD0 /* UIColor-Hex.swift in Sources */,
 				FAD4C744251BCBA4003DE897 /* AppDelegate.swift in Sources */,
 				FA3A19F925779E8700DD5D53 /* Bundle-Decode.swift in Sources */,
+				FAA92B8B25FD08BA0098C0BB /* LayoutSection-Constants.swift in Sources */,
 				FAFBFCF425750C62005FECD0 /* CardCell.swift in Sources */,
+				FAA92B9125FD09010098C0BB /* Layout-List.swift in Sources */,
 				FAFBFCE6257501C9005FECD0 /* CardCellViewModel.swift in Sources */,
-				FA32DF9425768094007C4C96 /* CollectionView-Cards.swift in Sources */,
-				FA32DF8825766B68007C4C96 /* CardsHeaderView.swift in Sources */,
+				FAA92B8325FD07FE0098C0BB /* LayoutSection-Grid.swift in Sources */,
+				FAA92B8625FD081C0098C0BB /* LayoutSection-List.swift in Sources */,
+				FA32DF9425768094007C4C96 /* CardsCollectionView.swift in Sources */,
+				FA32DF8825766B68007C4C96 /* HeaderView.swift in Sources */,
 				FAD4C768251C7FAF003DE897 /* CardSection.swift in Sources */,
 				FA01CB2F257528A200D31733 /* BubbleView.swift in Sources */,
 				FAD4C75D251BD160003DE897 /* Card.swift in Sources */,

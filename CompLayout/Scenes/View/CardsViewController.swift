@@ -6,56 +6,48 @@
 //
 
 import Combine
-import CombineExtensions
 import UIKit
 
-final class CardsViewController: UICollectionViewController {
+final class CardsViewController: UIViewController {
     
+    let collectionView = CardsCollectionView()
     let viewModel: CardsViewModel
-    var subscription: Cancellable?
+    var subscriptions: [AnyCancellable] = []
         
     init(viewModel: CardsViewModel) {
         self.viewModel = viewModel
-        super.init(collectionViewLayout: .cardsLayout)
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("storyboard unsupported in this project.")
     }
     
+    override func loadView() {
+        view = collectionView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        collectionView.backgroundColor = .systemGray6
-        collectionView.registerCardsCells()
         
-        subscription = viewModel.$sections.assign(
+        viewModel.$sections.assign(
             to: collectionView,
-            cellProvider: collectionView.cardCellProvider,
-            supplementaryViewProvider: collectionView.cardsHeaderProvider
-        )
+            cellProvider: collectionView.cellProvider,
+            supplementaryViewProvider: collectionView.headerProvider
+        ).store(in: &subscriptions)
+        
+        collectionView.configureLayout()
+        collectionView.delegate = self
     }
 }
 
-extension CardsViewController {
+extension CardsViewController: UICollectionViewDelegate {
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let dataSource = collectionView.dataSource as? CardsDataSource,
-              let card = dataSource.itemIdentifier(for: indexPath)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let collection = collectionView as? CardsCollectionView,
+              let card = collection.item(for: indexPath)
         else { return }
-        print("selected", card.title)
-    }
-}
-
-extension UICollectionViewLayout {
-    
-    static var cardsLayout: UICollectionViewCompositionalLayout {
-        UICollectionViewCompositionalLayout { section, _ in
-            switch section {
-            case 0:  return .carousel
-            case 1:  return .list
-            default: return .grid(columns: 2)
-            }
-        }
+        
+        print(card.title)
     }
 }
